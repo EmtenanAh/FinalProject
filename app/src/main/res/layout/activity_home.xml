@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".View.Home.HomeActivity">
 
+
+    <ImageView
+        android:id="@+id/neighborhoods"
+        android:layout_width="143dp"
+        android:layout_height="141dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="58dp"
+        android:src="@drawable/homeee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saved" />
+
+    <ImageView
+        android:id="@+id/saved"
+        android:layout_width="143dp"
+        android:layout_height="141dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="63dp"
+        android:src="@drawable/saved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="143dp"
+        android:layout_height="141dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/man"
+        app:layout_constraintEnd_toStartOf="@+id/saved"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
