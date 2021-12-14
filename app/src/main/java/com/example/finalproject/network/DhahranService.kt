@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface DhahranService {
     @GET("Dhahran")
-    fun getAllProducts(): Call<List<Dhahran>>
+    fun getAllDhahran(): Call<List<Dhahran>>
 }
