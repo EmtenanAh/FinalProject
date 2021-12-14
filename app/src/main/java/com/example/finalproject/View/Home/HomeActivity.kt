@@ -5,34 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.finalproject.R
-import com.example.finalproject.View.Neighborhoods.Neighborhoods
-import com.example.finalproject.View.Profile.ProfileActivity
-import com.example.finalproject.View.Registration.Registration
-import com.example.finalproject.View.saved.SavedActivity
+import com.example.finalproject.View.Fragment.FragmentAdapter
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        var neighborhoods=findViewById<ImageView>(R.id.neighborhoods)
-        var saved=findViewById<ImageView>(R.id.saved)
-        var profile=findViewById<ImageView>(R.id.profile)
-        neighborhoods.setOnClickListener {
-            var intent=Intent(this, Neighborhoods::class.java)
-            startActivity(intent)
-
-        }
-        saved.setOnClickListener {
-            var intent=Intent(this, SavedActivity::class.java)
-            startActivity(intent)
-
-        }
-        profile.setOnClickListener {
-            var intent=Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
-
-
-        }
+      var viewPager=findViewById<ViewPager2>(R.id.viewPager)
+        var tabLayout=findViewById<TabLayout>(R.id.tabLayout)
+        viewPager.adapter=FragmentAdapter(this)
+        var title= arrayOf("Home","Saved","Profile")
+        var icons= arrayOf(R.drawable.ic_baseline_home_24, R.drawable.saved,R.drawable.ic_baseline_person_24)
+        TabLayoutMediator(tabLayout,viewPager){tab1,postion ->
+            tab1.text=title[postion]
+            tab1.setIcon(icons[postion])
+        }.attach()
     }
 }

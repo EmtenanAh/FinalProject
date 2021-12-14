@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FinalProject"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".View.Details.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.Dhahran.DhahranActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.Profile.ProfileActivity"
             android:exported="false" />
         <activity
@@ -32,13 +38,18 @@
             android:exported="false" />
         <activity
             android:name=".View.Splash.Splash"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

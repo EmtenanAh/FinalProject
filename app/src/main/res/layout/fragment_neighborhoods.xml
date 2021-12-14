@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".View.Fragment.NeighborhoodsFragment">
+
+    <ImageView
+        android:id="@+id/imageViewDhahran"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/bc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDhahran"
+        android:layout_width="168dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="120dp"
+        android:text="Dhahran"
+        android:textAlignment="center"
+        android:textColor="#CC5100"
+        android:textSize="34sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDhahran"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDhahran" />
+
+    <ImageView
+        android:id="@+id/imageViewOlaya"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/bc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewolaya"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="120dp"
+        android:text="AL_Olaya"
+        android:textAlignment="center"
+        android:textColor="#FF7043"
+        android:textSize="34sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewOlaya"
+        app:layout_constraintStart_toStartOf="@+id/imageViewOlaya"
+        app:layout_constraintTop_toTopOf="@+id/imageViewOlaya" />
+</androidx.constraintlayout.widget.ConstraintLayout>
