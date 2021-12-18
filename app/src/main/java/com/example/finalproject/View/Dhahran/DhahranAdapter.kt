@@ -18,7 +18,7 @@ var image_kindergarten=v.findViewById<ImageView>(R.id.image_kindergarten)
     var image_save=v.findViewById<ImageView>(R.id.image_save)
     var button_apply=v.findViewById<Button>(R.id.button_apply)
 }
-class DhahranAdapter (var data:MutableList<Dhahran>): RecyclerView.Adapter<DhahranHolder>()  {
+class DhahranAdapter (var data:List<Dhahran>): RecyclerView.Adapter<DhahranHolder>()  {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DhahranHolder {
         var v = LayoutInflater.from(parent.context)

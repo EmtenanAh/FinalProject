@@ -21,7 +21,7 @@ class Login : AppCompatActivity() {
                 startActivity(Intent(this,HomeActivity::class.java))
             })
         }
-binding.singup.setOnClickListener {
+binding.registeractivity.setOnClickListener {
 
         var intent=Intent(this,Registration::class.java)
         startActivity(intent)

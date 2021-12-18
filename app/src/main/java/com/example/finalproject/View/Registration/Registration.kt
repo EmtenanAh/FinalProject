@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.finalproject.View.Home.HomeActivity
+import com.example.finalproject.View.Login.Login
 import com.example.finalproject.databinding.ActivityRegistrationBinding
 
 class Registration : AppCompatActivity() {
@@ -13,7 +14,7 @@ class Registration : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityRegistrationBinding.inflate(layoutInflater)
         val viewModelregister: RegistrationViewModel by viewModels()
-        binding.registration.setOnClickListener {
+        binding.register.setOnClickListener {
             viewModelregister.register(
                 binding.email.text.toString(),
                 binding.password.text.toString(),
@@ -27,6 +28,10 @@ class Registration : AppCompatActivity() {
                 } else Toast.makeText(this, "wrong in registration ", Toast.LENGTH_SHORT).show()
             })
         }
+       binding.loginactivity.setOnClickListener {
+
+           var intent=Intent(this,Login::class.java)
+           startActivity(intent)       }
 
         setContentView(binding.root)
 
