@@ -38,4 +38,5 @@ class DhahranAdapter (var data:List<Dhahran>): RecyclerView.Adapter<DhahranHolde
     override fun getItemCount(): Int {
         return data.size
     }
+
 }

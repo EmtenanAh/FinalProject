@@ -1,11 +1,18 @@
 package com.example.finalproject.Repostory
 
 import androidx.lifecycle.MutableLiveData
+import com.example.finalproject.Model.User
+import com.example.finalproject.network.API
+import com.example.finalproject.network.UserService
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.create
 
 class UserRepository {
     private lateinit var auth: FirebaseAuth
@@ -61,5 +68,31 @@ class UserRepository {
             }
         return mutableLiveData
 
+    }
+    fun addUserToApi(email: String,fb_id:String,fullname: String,id:String,phone: String):MutableLiveData<User>{
+       var mutableLiveData = MutableLiveData<User>()
+        var userService = API.getInstance().create(UserService::class.java)
+        val callAddUserToAPI=userService.addUser(User(email,fb_id,fullname,id,phone)
+        )
+        callAddUserToAPI.enqueue(object : Callback<User>{
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                mutableLiveData.postValue(response.body())
+            }
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                println("error")
+            }
+        })
+        return mutableLiveData
+    }
+    fun getUserByIDForprofile(id: String):MutableLiveData<User>{
+        var mutableLiveData=MutableLiveData<User>()
+        val userService=API.getInstance().create(UserService::class.java)
+        val callUserByIDForProfile=userService.getUserByFBid(id)
+        callUserByIDForProfile.enqueue(object : Callback<User>{
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                mutableLiveData.
+            }
+        })
     }
 }
