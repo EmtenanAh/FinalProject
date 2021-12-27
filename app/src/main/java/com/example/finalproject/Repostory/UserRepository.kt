@@ -35,20 +35,21 @@ class UserRepository {
         email: String,
         password: String,
         phone: String,
-        fullname: String
+        name: String,
+        birthday:String
     ): MutableLiveData<Boolean> {
         var mutableLiveData = MutableLiveData<Boolean>()
         auth = Firebase.auth
-      //  var db = Firebase.firestore
+        //  var db = Firebase.firestore
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
                     val u = hashMapOf(
                         "email" to auth.currentUser?.email,
                         "phone" to phone,
-                        "fullname" to fullname,
+                        "name" to name,
                         "image" to "",
-                        "birthday" to ""
+                        "birthday" to birthday
                     )
                     var db = Firebase.firestore
                     db.collection("users").document(auth.currentUser?.uid.toString())
@@ -69,12 +70,21 @@ class UserRepository {
         return mutableLiveData
 
     }
-    fun addUserToApi(email: String,fb_id:String,fullname: String,id:String,phone: String):MutableLiveData<User>{
-       var mutableLiveData = MutableLiveData<User>()
+
+    fun addUserToApi(
+        email: String,
+        fb_id: String,
+        name: String,
+        id: String,
+        phone: String,
+        birthday:String
+    ): MutableLiveData<User> {
+        var mutableLiveData = MutableLiveData<User>()
         var userService = API.getInstance().create(UserService::class.java)
-        val callAddUserToAPI=userService.addUser(User(email,fb_id,fullname,id,phone)
+        val callAddUserToAPI = userService.addUser(
+            User(email, fb_id, name, id, phone,birthday)
         )
-        callAddUserToAPI.enqueue(object : Callback<User>{
+        callAddUserToAPI.enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 mutableLiveData.postValue(response.body())
             }
@@ -85,14 +95,39 @@ class UserRepository {
         })
         return mutableLiveData
     }
-    fun getUserByIDForprofile(id: String):MutableLiveData<User>{
-        var mutableLiveData=MutableLiveData<User>()
-        val userService=API.getInstance().create(UserService::class.java)
-        val callUserByIDForProfile=userService.getUserByFBid(id)
-        callUserByIDForProfile.enqueue(object : Callback<User>{
-            override fun onResponse(call: Call<User>, response: Response<User>) {
-                mutableLiveData.
+
+    fun getUserByID(id: String): MutableLiveData<List<User>> {
+        var mutableLiveData = MutableLiveData<List<User>>()
+        val userService = API.getInstance().create(UserService::class.java)
+        val callUserByFBID = userService.getUserByFBId(id)
+        callUserByFBID.enqueue(object : Callback<List<User>> {
+            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+                mutableLiveData.postValue(response.body())
+            }
+
+            override fun onFailure(call: Call<List<User>>, t: Throwable) {
+                println("error")
             }
         })
+        return mutableLiveData
+
     }
+
+    fun getUserByIDForprofile(id: String): MutableLiveData<User> {
+        var mutableLiveData = MutableLiveData<User>()
+        val userService = API.getInstance().create(UserService::class.java)
+        val callUserByIDForProfile = userService.getUserByIDForProfile(id)
+        callUserByIDForProfile.enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                mutableLiveData.postValue(response.body())
+            }
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                println("error")
+            }
+        })
+        return mutableLiveData
+    }
+
+    fun logout() = Firebase.auth.signOut()
 }

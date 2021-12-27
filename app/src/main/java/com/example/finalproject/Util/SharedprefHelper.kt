@@ -4,7 +4,7 @@ import android.content.Context
 
 class SharedprefHelper {
     companion object{
-        fun SaveUserId(context: Context,uid:String):Unit{
+        fun SaveUserId(context: Context, uid:String):Unit{
             var pref=context.getSharedPreferences("Mypref",Context.MODE_PRIVATE)
             pref.edit()
                 .putString("id",uid).commit()

@@ -3,6 +3,7 @@ package com.example.finalproject.View.Fragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.finalproject.View.Fragment.Profile.ProfileFragment
 
 class FragmentAdapter (activity: FragmentActivity): FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {
