@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.example.finalproject.Repostory.UserRepository
 import com.example.finalproject.Util.SharedprefHelper
 
-class LoginViewModel:ViewModel() {
+class LoginViewModel : ViewModel() {
 
     fun login(context: Context, email: String, password: String): MutableLiveData<Boolean> {
         var loginLiveData = MutableLiveData<Boolean>()
@@ -14,7 +14,7 @@ class LoginViewModel:ViewModel() {
         var userRepository = UserRepository()
         userRepository.login(email, password).observeForever {
             userRepository.getUserByID(it.uid).observeForever {
-               // var userID = it[0].id
+                // var userID = it[0].id
                 //SharedprefHelper.SaveUserId(context, userID)
                 loginLiveData.postValue(true)
             }

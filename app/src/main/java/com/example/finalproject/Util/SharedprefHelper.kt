@@ -10,8 +10,8 @@ class SharedprefHelper {
                 .putString("id",uid).commit()
         }
         fun getUserId(context: Context):String{
-            var pref=context.getSharedPreferences("Mypref",Context.MODE_PRIVATE)
-            var id=pref.getString("id","null")
+            val pref=context.getSharedPreferences("Mypref",Context.MODE_PRIVATE)
+            val id=pref.getString("id","null")
             return id!!
         }
     }

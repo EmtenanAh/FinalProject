@@ -21,6 +21,7 @@ class Registration : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         auth = Firebase.auth
         val binding = ActivityRegistrationBinding.inflate(layoutInflater)
         val viewModelregister: RegistrationViewModel by viewModels()
@@ -32,16 +33,18 @@ class Registration : AppCompatActivity() {
                 binding.name.text.toString(),
                 binding.birthday.text.toString()
             ).observe(this, {
-                var email=binding.email.text.toString()
-                var phone=binding.phone.text.toString()
-                var name=binding.name.text.toString()
-                var birthday=binding.birthday.text.toString()
-                var fb_id=auth.currentUser?.uid.toString()
-                var user= User(birthday,email,fb_id,"",name,phone)
-                viewModelregister.addUserAPI(user.email,user.fb_id,user.name,user.id,user.phone,user.birthday)
+                var email = binding.email.text.toString()
+                var phone = binding.phone.text.toString()
+                var name = binding.name.text.toString()
+                var birthday = binding.birthday.text.toString()
+                var fb_id = auth.currentUser?.uid.toString()
+
+                var user = User(birthday, email, fb_id, "1", name, phone)
+                viewModelregister.addUserAPI(email,fb_id,name,user.id,phone,birthday
+                )
                 viewModelregister.registrationlivedata.observe(this, {
-                SharedprefHelper.SaveUserId(this,it.id)
-                  SharedprefHelper.getUserId(this)
+                    SharedprefHelper.SaveUserId(this, it.id)
+                    SharedprefHelper.getUserId(this)
                     startActivity(Intent(this, HomeActivity::class.java))
 
                 })

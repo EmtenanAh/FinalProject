@@ -24,7 +24,7 @@ class UserRepository {
                 if (task.isSuccessful) {
                     mutableLiveData.value = auth.currentUser
                 } else {
-                    println("error")
+                    println("error"+task.exception?.message)
                 }
 
             }
@@ -36,7 +36,7 @@ class UserRepository {
         password: String,
         phone: String,
         name: String,
-        birthday:String
+        birthday: String
     ): MutableLiveData<Boolean> {
         var mutableLiveData = MutableLiveData<Boolean>()
         auth = Firebase.auth
@@ -72,17 +72,17 @@ class UserRepository {
     }
 
     fun addUserToApi(
-        email: String,
         fb_id: String,
         name: String,
-        id: String,
+        email: String,
+        birthday: String,
         phone: String,
-        birthday:String
+        id: String,
     ): MutableLiveData<User> {
         var mutableLiveData = MutableLiveData<User>()
         var userService = API.getInstance().create(UserService::class.java)
         val callAddUserToAPI = userService.addUser(
-            User(email, fb_id, name, id, phone,birthday)
+            User(birthday, email, fb_id, id, name, phone)
         )
         callAddUserToAPI.enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
@@ -110,7 +110,6 @@ class UserRepository {
             }
         })
         return mutableLiveData
-
     }
 
     fun getUserByIDForprofile(id: String): MutableLiveData<User> {
@@ -129,5 +128,5 @@ class UserRepository {
         return mutableLiveData
     }
 
-    fun logout() = Firebase.auth.signOut()
+   // fun logout() = Firebase.auth.signOut()
 }

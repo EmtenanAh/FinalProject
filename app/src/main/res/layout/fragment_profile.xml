@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField"
+                android:id="@+id/name1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -46,7 +46,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField1"
+                android:id="@+id/email1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -55,7 +55,7 @@
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField"
+                app:layout_constraintTop_toBottomOf="@+id/birthday1"
                 app:startIconDrawable="@mipmap/email">
 
 
@@ -69,7 +69,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField2"
+                android:id="@+id/phone1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -78,7 +78,7 @@
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField1"
+                app:layout_constraintTop_toBottomOf="@+id/name1"
                 app:startIconDrawable="@mipmap/phone">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -91,7 +91,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField3"
+                android:id="@+id/birthday1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -100,7 +100,7 @@
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField2"
+                app:layout_constraintTop_toBottomOf="@+id/phone1"
                 app:startIconDrawable="@mipmap/calender">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -124,7 +124,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+                app:layout_constraintTop_toBottomOf="@+id/email1"
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,23 +17,23 @@ class Login : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        auth=Firebase.auth
-        val binding= ActivityLoginBinding.inflate(layoutInflater)
-        val vm:LoginViewModel by viewModels()
-        binding.login.setOnClickListener{
-            vm.login(this,binding.email.text.toString(),binding.password.text.toString())
-                .observe(this,{
-                    startActivity(Intent(this,HomeActivity::class.java))
+        auth = Firebase.auth
+        val binding = ActivityLoginBinding.inflate(layoutInflater)
+        val vm: LoginViewModel by viewModels()
+        binding.login.setOnClickListener {
+            vm.login(this, binding.email.text.toString(), binding.password.text.toString())
+                .observe(this, {
+                    startActivity(Intent(this, HomeActivity::class.java))
                 })
 
         }
-binding.registeractivity.setOnClickListener {
+        binding.registeractivity.setOnClickListener {
 
-        var intent=Intent(this,Registration::class.java)
-        startActivity(intent)
+            var intent = Intent(this, Registration::class.java)
+            startActivity(intent)
 
 
-}
+        }
         setContentView(binding.root)
 
     }
