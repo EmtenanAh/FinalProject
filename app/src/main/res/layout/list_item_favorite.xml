@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="match_parent">
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview"
+        android:id="@+id/Fcardview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -20,14 +19,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
             <ImageView
-                android:id="@+id/image_kindergarten"
+                android:id="@+id/image_Favorite"
                 android:layout_width="146dp"
                 android:layout_height="152dp"
                 android:layout_marginStart="16dp"
@@ -37,7 +33,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/name_kindergarten"
+                android:id="@+id/name_Favorite"
                 android:layout_width="213dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
@@ -45,19 +41,19 @@
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/image_kindergarten"
+                app:layout_constraintStart_toEndOf="@+id/image_Favorite"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/type_kindergarten"
+                android:id="@+id/type_Favorite"
                 android:layout_width="213dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/image_kindergarten"
-                app:layout_constraintTop_toBottomOf="@+id/name_kindergarten" />
+                app:layout_constraintStart_toEndOf="@+id/image_Favorite"
+                app:layout_constraintTop_toBottomOf="@+id/name_Favorite" />
 
             <CheckBox
                 android:id="@+id/icon"
@@ -70,7 +66,7 @@
                 app:buttonTint="@android:color/holo_red_dark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button_apply"
-                app:layout_constraintTop_toBottomOf="@+id/type_kindergarten" />
+                app:layout_constraintTop_toBottomOf="@+id/type_Favorite" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_apply"
@@ -84,9 +80,34 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/image_kindergarten"
-                app:layout_constraintTop_toBottomOf="@+id/type_kindergarten"
+                app:layout_constraintStart_toEndOf="@+id/image_Favorite"
+                app:layout_constraintTop_toBottomOf="@+id/type_Favorite"
                 app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+
+
+
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

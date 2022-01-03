@@ -1,4 +1,4 @@
-package com.example.finalproject.View.Fragment
+package com.example.finalproject.View.Fragment.Favorite
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,7 +15,7 @@ class SavedFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val context = inflater.context
-        val v = inflater.inflate(R.layout.fragment_profile, container, false)
+        val v = inflater.inflate(R.layout.fragment_saved, container, false)
 
         return v
     }

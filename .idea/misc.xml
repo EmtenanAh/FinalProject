@@ -7,10 +7,14 @@
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/asma.xml" value="0.22777777777777777" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/button.xml" value="0.2703125" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/edittext.xml" value="0.1" />
+        <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.18425925925925926" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.18425925925925926" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/login.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/sl_favourite_24dp.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_asma.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_details.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_dhahran.xml" value="0.2" />
@@ -26,6 +30,7 @@
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_saved.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/list_item.xml" value="0.25" />
+        <entry key="..\:/Users/Emten/AndroidStudioProjects/FinalProject/app/src/main/res/layout/list_item_favorite.xml" value="0.2" />
       </map>
     </option>
   </component>

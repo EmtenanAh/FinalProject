@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +19,7 @@ class DhahranHolder (v: View): RecyclerView.ViewHolder(v){
 var image_kindergarten=v.findViewById<ImageView>(R.id.image_kindergarten)
     var name_kindergarten=v.findViewById<TextView>(R.id.name_kindergarten)
     var type_kindergarten=v.findViewById<TextView>(R.id.type_kindergarten)
-    var image_save=v.findViewById<ImageView>(R.id.image_save)
+    var icon_f=v.findViewById<CheckBox>(R.id.icon)
     var button_apply=v.findViewById<Button>(R.id.button_apply)
     val constraint=v.findViewById<ConstraintLayout>(R.id.constraint)
 

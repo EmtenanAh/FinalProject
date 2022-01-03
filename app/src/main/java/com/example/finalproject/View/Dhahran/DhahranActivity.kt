@@ -19,6 +19,7 @@ class DhahranActivity : AppCompatActivity() {
         viewModel.getdhahran().observe(this,{list->
             dhahran_recyclerview.adapter=DhahranAdapter(list)
         })
+
     }
 }
 

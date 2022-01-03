@@ -10,10 +10,9 @@ import android.widget.ImageView
 import com.example.finalproject.R
 import com.example.finalproject.View.Dhahran.DhahranActivity
 
-//
+
 class NeighborhoodsFragment : Fragment() {
-//
-//
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +25,7 @@ class NeighborhoodsFragment : Fragment() {
             activity?.startActivity(intent)
         }
         return v
-//
-//
+
+
     }
 }

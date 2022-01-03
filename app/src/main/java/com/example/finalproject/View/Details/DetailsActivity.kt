@@ -36,7 +36,6 @@ class DetailsActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
             intent.setPackage("com.google.android.apps.maps")
             startActivity(intent)
-
         }
     }
 }
