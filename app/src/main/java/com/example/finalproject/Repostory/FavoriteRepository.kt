@@ -2,6 +2,7 @@ package com.example.finalproject.Repostory
 
 import androidx.lifecycle.MutableLiveData
 import com.example.finalproject.Model.Favorite
+import com.example.finalproject.Model.User
 import com.example.finalproject.network.API
 import com.example.finalproject.network.FavoriteService
 import com.google.protobuf.Api
@@ -12,17 +13,14 @@ import retrofit2.create
 
 class FavoriteRepository {
     fun setFavorite(
-        id: String,
-        image: String,
-        name: String,
-        type: String,
-        UserId: String
+   favorite: Favorite,
+    UserId: String
     ):MutableLiveData<Favorite>{
         val liveData=MutableLiveData<Favorite>()
         val favoriteservice=API.getInstance().create(FavoriteService::class.java)
-        favoriteservice.setFavorite(UserId, Favorite(UserId, id, image, name, type)).enqueue(object :Callback<Favorite>{
+        favoriteservice.setFavorite(UserId, favorite).enqueue(object :Callback<Favorite>{
             override fun onResponse(call: Call<Favorite>, response: Response<Favorite>) {
-                var favorite_1=response.body()
+               var favorite_1=response.body()
                 liveData.postValue(response.body())
                 println("favorite add")
                 println(favorite_1?.UserId)
@@ -51,4 +49,22 @@ class FavoriteRepository {
         })
         return liveData
     }
+    fun deleteFavorite(UserId:String):MutableLiveData<Favorite>{
+        val liveData=MutableLiveData<Favorite>()
+        val favoriteservice=API.getInstance().create(FavoriteService::class.java)
+        favoriteservice.deleteFavorite(UserId).enqueue(object :Callback<Favorite>{
+            override fun onResponse(
+                call: Call<Favorite>,
+                response: Response<Favorite>
+            ) {
+                liveData.postValue(response.body())
+            }
+
+            override fun onFailure(call: Call<Favorite>, t: Throwable) {
+
+            }
+        })
+        return liveData
+    }
+
 }

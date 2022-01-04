@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.Model.Favorite
 import com.example.finalproject.R
+import com.example.finalproject.Util.SharedprefHelper
 import com.example.finalproject.View.Details.DetailsActivity
 import com.example.finalproject.View.Dhahran.DhahranHolder
 import com.squareup.picasso.Picasso
@@ -44,6 +45,14 @@ class FavoriteAdapter (var data:List<Favorite>): RecyclerView.Adapter<FavoriteHo
             i.putExtra("Favorite", data[position])
             constraint.startActivity(i)
         }
+
+//        holder.icon.setOnCheckedChangeListener { buttonView, isChecked ->
+//            var context=holder.icon.context
+//            var userId=SharedprefHelper.getUserId(context)
+//            FavoriteViewModel().setFavorite(data[position],userId).observeForever{
+//
+//            }
+//        }
 
     }
     override fun getItemCount(): Int {

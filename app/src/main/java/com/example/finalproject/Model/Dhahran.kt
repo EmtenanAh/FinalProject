@@ -11,4 +11,5 @@ data class Dhahran(
     val name: String,
     val phone: String,
     val type: String
+
 ): Serializable

@@ -24,9 +24,9 @@ class SavedFragment : Fragment() {
         FavoriteRecyclerview.layoutManager=LinearLayoutManager(context)
         var userId=SharedprefHelper.getUserId(context)
         favoriteViewModel.getFavorite(userId).observe(this,{list ->
-            if (list !=null){
+       if (list !=null){
                 FavoriteRecyclerview.adapter=FavoriteAdapter(list)
-            }
+          }
         })
 
         return v

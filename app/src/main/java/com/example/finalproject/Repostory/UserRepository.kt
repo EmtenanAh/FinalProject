@@ -1,5 +1,6 @@
 package com.example.finalproject.Repostory
 
+import android.widget.TextView
 import androidx.lifecycle.MutableLiveData
 import com.example.finalproject.Model.User
 import com.example.finalproject.network.API
@@ -24,7 +25,7 @@ class UserRepository {
                 if (task.isSuccessful) {
                     mutableLiveData.value = auth.currentUser
                 } else {
-                    println("error"+task.exception?.message)
+                    println("error" + task.exception?.message)
                 }
 
             }
@@ -123,10 +124,10 @@ class UserRepository {
 
             override fun onFailure(call: Call<User>, t: Throwable) {
                 println("error")
-            } 
+            }
         })
         return mutableLiveData
     }
 
-   // fun logout() = Firebase.auth.signOut()
+    // fun logout() = Firebase.auth.signOut()
 }

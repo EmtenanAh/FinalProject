@@ -9,14 +9,11 @@ import com.example.finalproject.Repostory.FavoriteRepository
 class FavoriteViewModel:ViewModel() {
     var FavoriteRepository=FavoriteRepository()
     fun setFavorite(
-        id: String,
-        image: String,
-        name: String,
-        type: String,
+        favorite: Favorite,
         UserId: String
     ): LiveData<Favorite>{
         val liveData=MutableLiveData<Favorite>()
-        FavoriteRepository.setFavorite(id, image, name, type, UserId).observeForever{
+        FavoriteRepository.setFavorite(favorite,UserId).observeForever{
             liveData.postValue(it)
         }
         return liveData
@@ -24,6 +21,15 @@ class FavoriteViewModel:ViewModel() {
     fun getFavorite(UserId: String):MutableLiveData<List<Favorite>>{
         val liveData=MutableLiveData<List<Favorite>>()
         FavoriteRepository.getFavorite(UserId).observeForever{
+            liveData.postValue(it)
+        }
+        return liveData
+    }
+    fun deleteFavorite(
+        UserId: String
+    ): LiveData<Favorite>{
+        val liveData=MutableLiveData<Favorite>()
+        FavoriteRepository.deleteFavorite(UserId).observeForever{
             liveData.postValue(it)
         }
         return liveData
