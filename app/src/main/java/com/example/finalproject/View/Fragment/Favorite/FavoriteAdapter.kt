@@ -17,16 +17,17 @@ import com.example.finalproject.View.Details.DetailsActivity
 import com.example.finalproject.View.Dhahran.DhahranHolder
 import com.squareup.picasso.Picasso
 
-class  FavoriteHolder (v: View): RecyclerView.ViewHolder(v){
-    var image_Favorite=v.findViewById<ImageView>(R.id.image_Favorite)
-    var name_Favorite=v.findViewById<TextView>(R.id.name_Favorite)
-    var type_Favorite=v.findViewById<TextView>(R.id.type_Favorite)
-    var icon=v.findViewById<CheckBox>(R.id.icon)
-    var button_apply=v.findViewById<Button>(R.id.button_apply)
-    val constraint=v.findViewById<ConstraintLayout>(R.id.constraint)
+class FavoriteHolder(v: View) : RecyclerView.ViewHolder(v) {
+    var image_Favorite = v.findViewById<ImageView>(R.id.image_Favorite)
+    var name_Favorite = v.findViewById<TextView>(R.id.name_Favorite)
+    var type_Favorite = v.findViewById<TextView>(R.id.type_Favorite)
+    var icon = v.findViewById<CheckBox>(R.id.icon)
+    var button_apply = v.findViewById<Button>(R.id.button_apply)
+    val constraint = v.findViewById<ConstraintLayout>(R.id.constraint)
 
 }
-class FavoriteAdapter (var data:List<Favorite>): RecyclerView.Adapter<FavoriteHolder>() {
+
+class FavoriteAdapter(var data: List<Favorite>) : RecyclerView.Adapter<FavoriteHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteHolder {
         var v = LayoutInflater.from(parent.context)
@@ -45,7 +46,7 @@ class FavoriteAdapter (var data:List<Favorite>): RecyclerView.Adapter<FavoriteHo
             i.putExtra("Favorite", data[position])
             constraint.startActivity(i)
         }
-
+holder.icon.isChecked=true
 //        holder.icon.setOnCheckedChangeListener { buttonView, isChecked ->
 //            var context=holder.icon.context
 //            var userId=SharedprefHelper.getUserId(context)
@@ -55,6 +56,7 @@ class FavoriteAdapter (var data:List<Favorite>): RecyclerView.Adapter<FavoriteHo
 //        }
 
     }
+
     override fun getItemCount(): Int {
         return data.size
 

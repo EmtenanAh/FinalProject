@@ -40,7 +40,8 @@ class Registration : AppCompatActivity() {
                 var fb_id = auth.currentUser?.uid.toString()
 
                 var user = User(birthday, email, fb_id, "1", name, phone)
-                viewModelregister.addUserAPI(email,fb_id,name,user.id,phone,birthday
+                viewModelregister.addUserAPI(
+                    email, fb_id, name, user.id, phone, birthday
                 )
                 viewModelregister.registrationlivedata.observe(this, {
                     SharedprefHelper.SaveUserId(this, it.id)

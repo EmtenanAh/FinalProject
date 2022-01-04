@@ -17,11 +17,11 @@ class NeighborhoodsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var v= inflater.inflate(R.layout.fragment_neighborhoods, container, false)
-        var DD=v.findViewById<ImageView>(R.id.DD)
-        var CC=v.findViewById<ImageView>(R.id.CC)
+        var v = inflater.inflate(R.layout.fragment_neighborhoods, container, false)
+        var DD = v.findViewById<ImageView>(R.id.DD)
+        var CC = v.findViewById<ImageView>(R.id.CC)
         DD.setOnClickListener {
-            var intent= Intent(activity,DhahranActivity::class.java)
+            var intent = Intent(activity, DhahranActivity::class.java)
             activity?.startActivity(intent)
         }
         return v

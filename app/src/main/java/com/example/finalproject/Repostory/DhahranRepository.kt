@@ -12,8 +12,8 @@ class DhahranRepository {
     fun getAllDhahran(): MutableLiveData<List<Dhahran>> {
 
         var mutableLiveData = MutableLiveData<List<Dhahran>>()
-        var dhahranservice= API.getInstance().create(DhahranService::class.java)
-        val calldhahranlist=dhahranservice.getAllDhahran()
+        var dhahranservice = API.getInstance().create(DhahranService::class.java)
+        val calldhahranlist = dhahranservice.getAllDhahran()
         calldhahranlist.enqueue(object : Callback<List<Dhahran>> {
 
             override fun onResponse(call: Call<List<Dhahran>>, response: Response<List<Dhahran>>) {

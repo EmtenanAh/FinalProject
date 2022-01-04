@@ -52,10 +52,20 @@ class DhahranAdapter(var data: List<Dhahran>) : RecyclerView.Adapter<DhahranHold
             if (isChecked) {
                 var userId = SharedprefHelper.getUserId(holder.itemView.context)
 
-                FavoriteViewModel().setFavorite(Favorite(userId,data[position].id,data[position].image,data[position].name,data[position].type),userId)
+                FavoriteViewModel().setFavorite(
+                    Favorite(
+                        userId,
+                        data[position].id,
+                        data[position].image,
+                        data[position].name,
+                        data[position].type
+                    ), userId
+                )
+               // holder.icon_f.isChecked=true
             } else {
-
-            }        }
+               // icon_f.isChecked=false
+            }
+        }
 //        holder.icon_f.setOnCheckedChangeListener { buttonView, isChecked ->
 //            var context=holder.icon_f.context
 //            var userId= SharedprefHelper.getUserId(context)

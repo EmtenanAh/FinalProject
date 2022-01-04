@@ -28,5 +28,6 @@ class Splash : AppCompatActivity() {
                 finish()
             }, splashscteen.toLong())
         }
-}}
+    }
+}
 

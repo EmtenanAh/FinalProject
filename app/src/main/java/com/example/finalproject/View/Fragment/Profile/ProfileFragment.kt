@@ -20,17 +20,17 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        
-        val context= inflater.context
-       val v= inflater.inflate(R.layout.fragment_profile, container, false)
-        val name=v.findViewById<EditText>(R.id.name)
-        val email=v.findViewById<EditText>(R.id.email)
-        val phone=v.findViewById<EditText>(R.id.phone)
-        val birthday=v.findViewById<EditText>(R.id.birthday)
-        var save=v.findViewById<Button>(R.id.save)
-        val viewModelProfile:ProfileViewModel by viewModels()
-        val iduser= SharedprefHelper.getUserId(context)
-        viewModelProfile.getUserByIDForprofile(iduser).observe(this,{
+
+        val context = inflater.context
+        val v = inflater.inflate(R.layout.fragment_profile, container, false)
+        val name = v.findViewById<EditText>(R.id.name)
+        val email = v.findViewById<EditText>(R.id.email)
+        val phone = v.findViewById<EditText>(R.id.phone)
+        val birthday = v.findViewById<EditText>(R.id.birthday)
+        var save = v.findViewById<Button>(R.id.save)
+        val viewModelProfile: ProfileViewModel by viewModels()
+        val iduser = SharedprefHelper.getUserId(context)
+        viewModelProfile.getUserByIDForprofile(iduser).observe(this, {
             name.setText(it.name)
             phone.setText(it.phone)
             birthday.setText(it.birthday)

@@ -16,7 +16,7 @@ class RegistrationViewModel : ViewModel() {
         birthday: String
     ): MutableLiveData<Boolean> {
         var urregister = UserRepository()
-        var registrationl = urregister.register(email, password, phone, name,birthday)
+        var registrationl = urregister.register(email, password, phone, name, birthday)
         return registrationl
     }
 
@@ -29,7 +29,7 @@ class RegistrationViewModel : ViewModel() {
         birthday: String
     ) {
         var urAddUserAPI = UserRepository()
-        registrationlivedata = urAddUserAPI.addUserToApi(fb_id,name,email,birthday,phone,id)
+        registrationlivedata = urAddUserAPI.addUserToApi(fb_id, name, email, birthday, phone, id)
     }
 }
 
