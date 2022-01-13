@@ -20,7 +20,7 @@ class Splash : AppCompatActivity() {
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener {
             var token = it.result.toString()
-            print(token)
+           print(token)
             val splashscteen = 5000
             val intent = Intent(this, Login::class.java)
             Handler().postDelayed({
@@ -29,5 +29,5 @@ class Splash : AppCompatActivity() {
             }, splashscteen.toLong())
         }
     }
-}
+    }
 

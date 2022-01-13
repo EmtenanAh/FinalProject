@@ -46,13 +46,12 @@ class DhahranAdapter(var data: List<Dhahran>) : RecyclerView.Adapter<DhahranHold
             val i = Intent(holder.itemView.context, DetailsActivity::class.java)
             i.putExtra("Dhahran", data[position])
             constraint.startActivity(i)
-
         }
         holder.icon_f.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 var userId = SharedprefHelper.getUserId(holder.itemView.context)
-
                 FavoriteViewModel().setFavorite(
+                     
                     Favorite(
                         userId,
                         data[position].id,
@@ -61,11 +60,12 @@ class DhahranAdapter(var data: List<Dhahran>) : RecyclerView.Adapter<DhahranHold
                         data[position].type
                     ), userId
                 )
-               // holder.icon_f.isChecked=true
+                holder.icon_f.isChecked = true
             } else {
-               // icon_f.isChecked=false
+                holder.icon_f.isChecked = false
             }
         }
+
 //        holder.icon_f.setOnCheckedChangeListener { buttonView, isChecked ->
 //            var context=holder.icon_f.context
 //            var userId= SharedprefHelper.getUserId(context)

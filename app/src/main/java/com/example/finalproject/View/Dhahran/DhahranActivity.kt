@@ -15,10 +15,10 @@ class DhahranActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dhahran)
         val viewModel: DhahranViewModel by viewModels()
         var dhahran_recyclerview = findViewById<RecyclerView>(R.id.dhahran_recyclerview)
-        dhahran_recyclerview.layoutManager = LinearLayoutManager(this)
-        viewModel.getdhahran().observe(this, { list ->
-            dhahran_recyclerview.adapter = DhahranAdapter(list)
-        })
+//        dhahran_recyclerview.layoutManager = LinearLayoutManager(this)
+//        viewModel.getdhahran().observe(this, { list ->
+//            dhahran_recyclerview.adapter = DhahranAdapter(list)
+//        })
 
     }
 }

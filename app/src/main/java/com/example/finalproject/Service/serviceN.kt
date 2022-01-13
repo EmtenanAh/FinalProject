@@ -8,6 +8,7 @@ import com.google.firebase.messaging.RemoteMessage
 class serviceN : FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
 
+
         println("Message recieved!")
         // ...
 

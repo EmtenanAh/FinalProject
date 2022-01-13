@@ -1,6 +1,7 @@
 package com.example.finalproject.View.Registration
 
 import android.content.Context
+import android.widget.EditText
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.finalproject.Model.User
@@ -20,6 +21,7 @@ class RegistrationViewModel : ViewModel() {
         return registrationl
     }
 
+
     fun addUserAPI(
         email: String,
         fb_id: String,
@@ -32,5 +34,3 @@ class RegistrationViewModel : ViewModel() {
         registrationlivedata = urAddUserAPI.addUserToApi(fb_id, name, email, birthday, phone, id)
     }
 }
-
-
