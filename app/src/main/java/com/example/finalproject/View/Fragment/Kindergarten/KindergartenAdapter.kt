@@ -10,15 +10,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalproject.Model.Dhahran
 import com.example.finalproject.Model.Favorite
+import com.example.finalproject.Model.Kindergarten
 import com.example.finalproject.R
 import com.example.finalproject.Util.SharedprefHelper
 import com.example.finalproject.View.Details.DetailsActivity
 import com.example.finalproject.View.Fragment.Favorite.FavoriteViewModel
 import com.squareup.picasso.Picasso
 
-class DhahranHolder(v: View) : RecyclerView.ViewHolder(v) {
+class KindergartenHolder(v: View) : RecyclerView.ViewHolder(v) {
     var image_kindergarten = v.findViewById<ImageView>(R.id.image_kindergarten)
     var name_kindergarten = v.findViewById<TextView>(R.id.name_kindergarten)
     var type_kindergarten = v.findViewById<TextView>(R.id.type_kindergarten)
@@ -28,23 +28,23 @@ class DhahranHolder(v: View) : RecyclerView.ViewHolder(v) {
 
 }
 
-class DhahranAdapter(var data: List<Dhahran>) : RecyclerView.Adapter<DhahranHolder>() {
+class KindergartenAdapter(var data: List<Kindergarten>) : RecyclerView.Adapter<KindergartenHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DhahranHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KindergartenHolder {
         var v = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
-        return DhahranHolder(v)
+        return KindergartenHolder(v)
     }
 
 
-    override fun onBindViewHolder(holder: DhahranHolder, position: Int) {
+    override fun onBindViewHolder(holder: KindergartenHolder, position: Int) {
         var constraint = holder.constraint.context
         Picasso.get().load(data[position].image).into(holder.image_kindergarten)
         holder.name_kindergarten.text = data[position].name
         holder.type_kindergarten.text = data[position].type
         holder.itemView.setOnClickListener {
             val i = Intent(holder.itemView.context, DetailsActivity::class.java)
-            i.putExtra("Dhahran", data[position])
+            i.putExtra("Kindergarten", data[position])
             constraint.startActivity(i)
         }
         holder.icon_f.setOnCheckedChangeListener { buttonView, isChecked ->

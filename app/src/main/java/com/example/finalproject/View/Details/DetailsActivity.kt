@@ -4,13 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.telecom.Call
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.finalproject.Model.Dhahran
+import com.example.finalproject.Model.Kindergarten
 import com.example.finalproject.R
 import com.squareup.picasso.Picasso
-import java.net.URI
 
 class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +21,7 @@ class DetailsActivity : AppCompatActivity() {
         val emailD = findViewById<TextView>(R.id.emailD)
         val phoneD = findViewById<TextView>(R.id.phoneD)
         val location = findViewById<ImageView>(R.id.location)
-        val Details = intent.getSerializableExtra("Dhahran") as Dhahran
+        val Details = intent.getSerializableExtra("Kindergarten") as Kindergarten
         name.setText(Details.name)
         typeD.setText(Details.type)
         descriptionD.setText(Details.description)

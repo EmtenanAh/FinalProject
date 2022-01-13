@@ -2,7 +2,8 @@ package com.example.finalproject.Model
 
 import java.io.Serializable
 
-data class Dhahran(
+data class Kindergarten(
+    val city: String,
     val description: String,
     val email: String,
     val id: String,
@@ -11,5 +12,4 @@ data class Dhahran(
     val name: String,
     val phone: String,
     val type: String
-
 ): Serializable
