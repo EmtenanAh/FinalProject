@@ -14,7 +14,6 @@ import com.example.finalproject.Model.Favorite
 import com.example.finalproject.R
 import com.example.finalproject.Util.SharedprefHelper
 import com.example.finalproject.View.Details.DetailsActivity
-import com.example.finalproject.View.Dhahran.DhahranHolder
 import com.squareup.picasso.Picasso
 
 class FavoriteHolder(v: View) : RecyclerView.ViewHolder(v) {

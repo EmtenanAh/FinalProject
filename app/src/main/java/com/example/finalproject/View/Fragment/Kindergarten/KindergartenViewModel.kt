@@ -10,4 +10,7 @@ class KindergartenViewModel : ViewModel() {
     fun getkindergarten(): LiveData<List<Kindergarten>> {
         return KindergartenRepository.getAllKindergarten()
     }
+    fun getKindergartenBycity(city:String):LiveData<List<Kindergarten>>{
+        return KindergartenRepository.getKindergartenBycity(city)
+    }
 }

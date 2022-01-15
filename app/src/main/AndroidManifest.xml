@@ -26,9 +26,7 @@
         <activity
             android:name=".View.Details.DetailsActivity"
             android:exported="false" />
-        <activity
-            android:name=".View.Dhahran.DhahranActivity"
-            android:exported="false" />
+
         <activity
             android:name=".View.Home.HomeActivity"
             android:exported="false" />
