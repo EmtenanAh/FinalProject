@@ -4,35 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ff7838"
     android:textAlignment="textEnd"
     tools:context=".View.Splash.Splash">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/x"
-        android:layout_width="345dp"
-        android:layout_height="439dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="348dp"
+        android:layout_height="486dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/bb">
+        app:lottie_rawRes="@raw/gg">
 
 
     </com.airbnb.lottie.LottieAnimationView>
 
     <TextView
         android:id="@+id/txt_Kindergarten"
-        android:layout_width="232dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/cantora_one"
+        android:layout_width="397dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="4dp"
+        android:drawableEnd="@drawable/ic_baseline_favorite_24"
+        android:fontFamily="@font/fonta"
         android:text="Kindergarten"
-        android:textAlignment="textEnd"
-        android:textColor="#66BB6A"
-        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="#FFDDA3 "
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/x" />
 </androidx.constraintlayout.widget.ConstraintLayout>

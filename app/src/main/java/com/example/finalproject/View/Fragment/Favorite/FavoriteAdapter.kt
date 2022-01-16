@@ -21,7 +21,7 @@ class FavoriteHolder(v: View) : RecyclerView.ViewHolder(v) {
     var name_Favorite = v.findViewById<TextView>(R.id.name_Favorite)
     var type_Favorite = v.findViewById<TextView>(R.id.type_Favorite)
     var icon = v.findViewById<CheckBox>(R.id.icon)
-    var button_apply = v.findViewById<Button>(R.id.button_apply)
+    //var button_apply = v.findViewById<Button>(R.id.button_apply)
     val constraint = v.findViewById<ConstraintLayout>(R.id.constraint)
 
 }

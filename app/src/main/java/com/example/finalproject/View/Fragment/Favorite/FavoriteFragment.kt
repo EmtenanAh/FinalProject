@@ -26,8 +26,8 @@ class FavoriteFragment : Fragment() {
         FavoriteRecyclerview.layoutManager = LinearLayoutManager(context)
         var userId = SharedprefHelper.getUserId(context)
         favoriteViewModel.getFavorite(userId).observe(this, { list ->
-           // if (list != null) {
-            var favorite = list.toMutableList()
+           if (list != null) {
+            var favorite = list as MutableList
             FavoriteRecyclerview.adapter = FavoriteAdapter(favorite)
             var swipe = object : SwipeToDeleteCallback(context) {
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
@@ -44,7 +44,7 @@ class FavoriteFragment : Fragment() {
 
             val touchHelper = ItemTouchHelper(swipe)
             touchHelper.attachToRecyclerView(FavoriteRecyclerview)
-            //   }
+              }
         })
 
         return v

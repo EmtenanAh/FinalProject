@@ -4,124 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#847ED4"
+    android:background="#fefaef "
     tools:context=".View.Login.Login">
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="299dp"
-        android:layout_height="266dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="96dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/nda" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="356dp"
-        android:layout_height="603dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/asma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
+        android:layout_width="185dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loginimage_1" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="294dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="100dp"
-            android:hint="Email"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@mipmap/email">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="60dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:startIconDrawable="@mipmap/email">
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="294dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="16dp"
-            android:hint="Password"
-            app:endIconMode="password_toggle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/login"
-            android:layout_width="294dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="32dp"
-            android:background="#847ED4"
-            android:backgroundTint="#ff7838"
-            android:text="Go"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField1"
-            tools:ignore="TextContrastCheck,TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/TV"
-            android:layout_width="194dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="80dp"
-            android:fontFamily="@font/cantora_one"
-            android:text="Login"
-            android:textAlignment="center"
-            android:textColor="#847ED4"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/registeractivity"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="44dp"
-            android:text="Dont have an account? Sign up."
-            android:textColor="#847ED4"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:fontFamily="@font/robotoslab_medium"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoslab_medium"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp"
+        android:background="#847ED4"
+        android:backgroundTint="#ff7838"
+        android:fontFamily="@font/robotoslab_medium"
+        android:text="Sing in"
+        android:textColor="#FFDDA3 "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField1"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/buttonRegister"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/robotoslab_medium"
+        android:text="Don’t have an account?  Register now"
+        android:textAlignment="center"
+        android:textColor="#ff7838"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/localization"
-        android:layout_width="65dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="45dp"
+        android:layout_width="79dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="54dp"
         android:background="#ff7838"
+        android:drawableStart="@drawable/ic_baseline_language_24"
+        android:fontFamily="@font/robotoslab_medium"
         android:text="عربي"
-        android:textColor="#FFFEFF"
+        android:textColor="#FFDDA3 "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="174dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="121dp"
+        android:fontFamily="@font/robotoslab_medium"
+        android:text="Kindergarten"
+        android:textColor="#ff7838"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/outlinedTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/shapes" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="232dp"
+        android:layout_marginBottom="185dp"
+        app:layout_constraintBottom_toTopOf="@+id/outlinedTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ellipse" />
 </androidx.constraintlayout.widget.ConstraintLayout>
