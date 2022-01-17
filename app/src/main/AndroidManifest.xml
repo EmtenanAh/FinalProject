@@ -29,7 +29,8 @@
 
         <activity
             android:name=".View.Home.HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Home"/>
         <activity
             android:name=".View.Registration.Registration"
             android:exported="false"
