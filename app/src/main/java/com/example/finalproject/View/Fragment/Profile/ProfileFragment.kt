@@ -49,15 +49,20 @@ class ProfileFragment : Fragment() {
         val iduser = SharedprefHelper.getUserId(context)
         viewModelProfile.getUserByIDForprofile(iduser).observe(this, {
             name.setText(it.name)
+            email.setText(it.email)
             phone.setText(it.phone)
             birthday.setText(it.birthday)
-            email.setText(it.email)
 
         })
 
-//        save.setOnClickListener {
-//
-//        }
+        save.setOnClickListener {
+            var name = name.text.toString()
+            var email = email.text.toString()
+            var phone = phone.text.toString()
+            var birthday = birthday.text.toString()
+            viewModelProfile.updateUser(email,name,phone, birthday, fb_id, id ,requireContext())
+
+        }
         return v
     }
 }

@@ -1,6 +1,10 @@
 package com.example.finalproject.Repostory
 
+import android.content.ContentValues.TAG
+import android.content.Context
+import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.example.finalproject.Model.User
 import com.example.finalproject.network.API
@@ -126,6 +130,48 @@ class UserRepository {
                 println("error")
             }
         })
+        return mutableLiveData
+    }
+    fun updateUser(
+                      name: String,
+                      email: String,
+                      birthday: String,
+                      phone: String,
+                      fb_id: String,
+                      id: String,
+context: Context
+    ):MutableLiveData<User>{
+        val db = Firebase.firestore
+        auth = Firebase.auth
+        db.collection("users").document(auth.currentUser?.uid.toString())
+            .update(
+                "email", email,
+                "name", name,
+                "phone", phone,
+                "birthday", birthday
+            ).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    val document: Void? = it.result
+                    if (document != null) {
+                        Log.d(TAG, "DocumentSnapshot data: " + it.result.toString())
+
+                    } else {
+                        Log.d(TAG, "No such document")
+                    }
+                    Toast.makeText(
+                        context,
+                        "profile has was updated Successful",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Log.d(TAG, "get failed with ", it.exception)
+
+                }
+            }
+        var user = User(birthday,email, fb_id, id ,name, phone)
+        mutableLiveData.postValue(user)
+
+
         return mutableLiveData
     }
 
