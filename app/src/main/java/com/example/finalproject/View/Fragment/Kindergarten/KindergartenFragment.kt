@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,9 +23,9 @@ class KindergartenFragment : Fragment() {
       var v = inflater.inflate(R.layout.fragment_kindergarten, container, false)
       val viewModel: KindergartenViewModel by viewModels()
       var RCKindergarten =v.findViewById<RecyclerView>(R.id.RCKindergarten)
-        var cardDammam=v.findViewById<CardView>(R.id.cardDammam)
-        var cardDhahran=v.findViewById<CardView>(R.id.cardDhahran)
-        var cardAlkhobar=v.findViewById<CardView>(R.id.cardAlkhobar)
+        var cardDammam=v.findViewById<ConstraintLayout>(R.id.cardDammam)
+        var cardDhahran=v.findViewById<ConstraintLayout>(R.id.cardDhahran)
+        var cardAlkhobar=v.findViewById<ConstraintLayout>(R.id.cardAlkhobar)
         cardDammam.setOnClickListener {
             viewModel.getKindergartenBycity("Dammam").observe(this,{
                 if (it!=null)

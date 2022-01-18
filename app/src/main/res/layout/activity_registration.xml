@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fefaef "
+    android:background="#f1f0eb"
     tools:context=".View.Registration.Registration">
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="174dp"
         android:layout_height="51dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="124dp"
         android:fontFamily="@font/robotoslab_medium"
         android:text="Kindergarten"
@@ -25,7 +24,6 @@
         android:layout_width="185dp"
         android:layout_height="137dp"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/loginimage_1" />
@@ -35,11 +33,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -50,7 +48,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="375dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="15dp"
                 android:hint="Email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +69,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="375dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="15dp"
                 android:hint="birthday"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +89,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="375dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="15dp"
                 android:hint="Password"
                 app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -112,7 +110,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="375dp"
                 android:layout_height="64dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="15dp"
                 android:hint="Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +130,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="375dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="15dp"
                 android:hint="Phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -156,8 +154,8 @@
 
 
         android:layout_height="48dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
         android:background="#ff7838"
         android:fontFamily="@font/robotoslab_medium"
         android:text="Singup"
@@ -170,8 +168,7 @@
         android:id="@+id/loginactivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="60dp"
         android:fontFamily="@font/robotoslab_medium"
         android:text="Already have an account? Sign in."
         android:textColor="#ff7838"
@@ -184,7 +181,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginEnd="230dp"
-        android:layout_marginBottom="90dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toTopOf="@+id/Scregister"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/shapes" />
@@ -194,7 +191,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginEnd="232dp"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toTopOf="@+id/Scregister"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ellipse" />

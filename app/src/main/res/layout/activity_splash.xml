@@ -30,7 +30,7 @@
         android:layout_marginEnd="4dp"
         android:drawableEnd="@drawable/ic_baseline_favorite_24"
         android:fontFamily="@font/fonta"
-        android:text="Kindergarten"
+        android:text="Little Angel Kindergarten"
         android:textAlignment="center"
         android:textColor="#FFDDA3 "
         android:textSize="45sp"

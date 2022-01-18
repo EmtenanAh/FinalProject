@@ -25,13 +25,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            android:background="#f1f0eb">
 
 
             <ImageView
                 android:id="@+id/image_kindergarten"
-                android:layout_width="152dp"
-                android:layout_height="181dp"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -42,12 +42,12 @@
                 android:layout_width="213dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/robotoslab_medium"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.421"
                 app:layout_constraintStart_toEndOf="@+id/image_kindergarten"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,7 +68,7 @@
                 android:id="@+id/icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="6dp"
                 android:button="@drawable/sl_favourite_24dp"
