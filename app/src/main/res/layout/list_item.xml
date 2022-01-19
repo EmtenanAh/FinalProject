@@ -86,7 +86,7 @@
                 android:layout_marginBottom="10dp"
                 android:background=" #ff7838"
                 android:fontFamily="@font/robotoslab_medium"
-                android:text="apply now"
+                android:text="@string/apply_nowlist"
                 android:textColor="#FFDDA3"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -60,7 +60,8 @@ class ProfileFragment : Fragment() {
             var email = email.text.toString()
             var phone = phone.text.toString()
             var birthday = birthday.text.toString()
-            viewModelProfile.updateUser(email,name,phone, birthday, fb_id, id ,requireContext())
+            viewModelProfile.updateUser(email,name,birthday,phone, fb_id = String(), id = String(),context)
+
 
         }
         return v

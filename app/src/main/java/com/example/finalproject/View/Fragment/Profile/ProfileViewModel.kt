@@ -11,15 +11,16 @@ class ProfileViewModel : ViewModel() {
     fun getUserByIDForprofile(id: String): MutableLiveData<User> {
         return userRepository.getUserByIDForprofile(id)
     }
+
     fun updateUser(
         email: String,
         name: String,
         birthday: String,
         phone: String,
-        fb_id:String,
+        fb_id: String,
         id: String,
         context: Context
     ): MutableLiveData<User> {
-        return UserRepository().updateUser(name,email, birthday,phone, fb_id,id,context)
+        return UserRepository().updateUser(name, email, birthday, phone, fb_id, id, context)
     }
 }

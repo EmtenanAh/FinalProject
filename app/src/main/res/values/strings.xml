@@ -2,4 +2,27 @@
     <string name="app_name">FinalProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emaillogin">Email</string>
+    <string name="passwordlogin">Password</string>
+    <string name="sing_in">Sing in</string>
+    <string name="don_t_have_an_account_register_now">Don’t have an account?</string>
+    <string name="localization">عربي</string>
+    <string name="email">Email</string>
+    <string name="birthday">birthday</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="singup">Singup</string>
+    <string name="already_have_an_account_sign_in">Already have an account?</string>
+    <string name="welcome_to_the_little_angel_kindergarten">Welcome to the little angel kindergarten.......</string>
+    <string name="dammam">Dammam</string>
+    <string name="dhahran">Dhahran</string>
+    <string name="alkhobar">ALKhobar</string>
+    <string name="sing_out">Sing out</string>
+    <string name="save">save</string>
+    <string name="registration_requests">Registration requests</string>
+    <string name="connect_with_us">Connect with us</string>
+    <string name="apply_nowlist">apply now</string>
+    <string name="apply_now">apply now</string>
+    <string name="register_now">Register now</string>
 </resources>

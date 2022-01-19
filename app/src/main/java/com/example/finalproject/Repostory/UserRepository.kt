@@ -132,15 +132,18 @@ class UserRepository {
         })
         return mutableLiveData
     }
+
     fun updateUser(
-                      name: String,
-                      email: String,
-                      birthday: String,
-                      phone: String,
-                      fb_id: String,
-                      id: String,
-context: Context
-    ):MutableLiveData<User>{
+        name: String,
+        email: String,
+        birthday: String,
+        phone: String,
+        fb_id: String,
+        id: String,
+        context: Context
+    ): MutableLiveData<User> {
+        var mutableLiveData = MutableLiveData<User>()
+
         val db = Firebase.firestore
         auth = Firebase.auth
         db.collection("users").document(auth.currentUser?.uid.toString())
@@ -168,7 +171,7 @@ context: Context
 
                 }
             }
-        var user = User(birthday,email, fb_id, id ,name, phone)
+        var user = User(birthday,email, fb_id, id, name, phone)
         mutableLiveData.postValue(user)
 
 

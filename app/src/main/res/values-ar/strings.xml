@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FinalProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emaillogin">الإميل</string>
+    <string name="passwordlogin">كلمة المرور</string>
+    <string name="sing_in">تسجيل الدخول</string>
+    <string name="don_t_have_an_account_register_now">ليس لديك حساب؟ </string>
+    <string name="localization">English</string>
+    <string name="email">الإميل</string>
+    <string name="birthday">تاريخ الميلاد</string>
+    <string name="password">كلمة المرور</string>
+    <string name="name">الإسم</string>
+    <string name="phone">رقم الجوال</string>
+    <string name="singup">تسجيل جديد</string>
+    <string name="already_have_an_account_sign_in">يوجد لديك حساب؟ تسجيل دخول</string>
+    <string name="welcome_to_the_little_angel_kindergarten">مرحبا بك في روضة الملاك الصغير ...... </string>
+    <string name="dammam">الدمام</string>
+    <string name="dhahran">الظهران</string>
+    <string name="alkhobar">الخبر</string>
+    <string name="sing_out"> تسجيل خروج</string>
+    <string name="save">حفظ</string>
+    <string name="registration_requests">طلبات التسجيل</string>
+    <string name="connect_with_us">تواصل معنا</string>
+    <string name="apply_nowlist">سجل الآن</string>
+    <string name="apply_now">سجل الآن</string>
+    <string name="register_now">انشاء حساب الآن</string>
+
+</resources>

@@ -49,7 +49,7 @@
                 android:layout_width="375dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="15dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedTextField4"
@@ -70,7 +70,7 @@
                 android:layout_width="375dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="15dp"
-                android:hint="birthday"
+                android:hint="@string/birthday"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedTextField1"
@@ -90,7 +90,7 @@
                 android:layout_width="375dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="15dp"
-                android:hint="Password"
+                android:hint="@string/password"
                 app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -110,11 +110,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="375dp"
                 android:layout_height="64dp"
-                android:layout_marginTop="15dp"
-                android:hint="Name"
+                android:hint="@string/name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:startIconDrawable="@mipmap/user">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -131,7 +130,7 @@
                 android:layout_width="375dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="15dp"
-                android:hint="Phone"
+                android:hint="@string/phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedTextField8"
@@ -158,22 +157,22 @@
         android:layout_marginEnd="24dp"
         android:background="#ff7838"
         android:fontFamily="@font/robotoslab_medium"
-        android:text="Singup"
+        android:text="@string/singup"
         android:textColor="#FFDDA3 "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Scregister"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/loginactivity"
+        android:id="@+id/tx_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="2dp"
         android:fontFamily="@font/robotoslab_medium"
-        android:text="Already have an account? Sign in."
-        android:textColor="#ff7838"
+        android:text="@string/already_have_an_account_sign_in"
+        android:textColor="@color/browser_actions_title_color"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/loginactivity1"
         app:layout_constraintTop_toBottomOf="@+id/register" />
 
     <ImageView
@@ -195,4 +194,16 @@
         app:layout_constraintBottom_toTopOf="@+id/Scregister"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ellipse" />
+
+    <TextView
+        android:id="@+id/loginactivity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="66dp"
+        android:fontFamily="@font/robotoslab_medium"
+        android:text=" Sign in."
+        android:textColor="#ff7838"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 </androidx.constraintlayout.widget.ConstraintLayout>

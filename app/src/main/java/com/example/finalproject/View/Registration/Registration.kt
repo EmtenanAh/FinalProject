@@ -105,7 +105,7 @@ class Registration : AppCompatActivity() {
 //
 //            })
 //        }
-        binding.loginactivity.setOnClickListener {
+        binding.loginactivity1.setOnClickListener {
 
             var intent = Intent(this, Login::class.java)
             startActivity(intent)
