@@ -30,23 +30,27 @@ lateinit var adapter: KindergartenAdapter
         cardDammam.setOnClickListener {
             viewModel.getKindergartenBycity("Dammam").observe(this,{
                 if (it!=null)
+                    adapter= KindergartenAdapter(it)
                     RCKindergarten.adapter=KindergartenAdapter(it)
             })
         }
         cardDhahran.setOnClickListener {
             viewModel.getKindergartenBycity("Dhahran").observe(this,{
                 if (it!=null)
+                    adapter=KindergartenAdapter(it)
                     RCKindergarten.adapter=KindergartenAdapter(it)
             })
         }
         cardAlkhobar.setOnClickListener {
             viewModel.getKindergartenBycity("Khobar").observe(this,{
                 if (it!=null)
+                    adapter=KindergartenAdapter(it)
                     RCKindergarten.adapter=KindergartenAdapter(it)
             })
         }
         RCKindergarten.layoutManager = LinearLayoutManager(context)
       viewModel.getkindergarten().observe(this, { list ->
+          adapter=KindergartenAdapter(list)
           RCKindergarten.adapter = KindergartenAdapter(list)
       })
 

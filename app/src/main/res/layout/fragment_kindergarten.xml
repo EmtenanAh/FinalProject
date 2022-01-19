@@ -183,7 +183,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="23dp"
         android:background="#f1f0eb"
+        app:layout_constraintBottom_toTopOf="@+id/RCKindergarten"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardDammam" />
