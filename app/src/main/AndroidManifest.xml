@@ -25,7 +25,8 @@
 
         <activity
             android:name=".View.Details.DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Details"/>
 
         <activity
             android:name=".View.Home.HomeActivity"

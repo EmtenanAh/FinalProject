@@ -18,9 +18,8 @@ class ProfileViewModel : ViewModel() {
         birthday: String,
         phone: String,
         fb_id: String,
-        id: String,
-        context: Context
+        id: String
     ): MutableLiveData<User> {
-        return UserRepository().updateUser(name, email, birthday, phone, fb_id, id, context)
+        return UserRepository().updateUser(name, email, birthday, phone, fb_id, id)
     }
 }

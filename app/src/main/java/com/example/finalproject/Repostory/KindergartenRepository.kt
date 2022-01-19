@@ -39,7 +39,6 @@ class KindergartenRepository {
 mutableLiveData.postValue(response.body())            }
 
             override fun onFailure(call: Call<List<Kindergarten>>, t: Throwable) {
-                TODO("Not yet implemented")
             }
         })
         return mutableLiveData

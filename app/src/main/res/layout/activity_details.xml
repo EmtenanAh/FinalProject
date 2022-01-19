@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f1f0eb"
     tools:context=".View.Details.DetailsActivity">
 
     <ImageView
@@ -24,7 +25,9 @@
         android:layout_height="39dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="21dp"
-        android:text="name"
+        android:fontFamily="@font/robotoslab_medium"
+        android:textColor="#929292"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -34,7 +37,9 @@
         android:layout_height="39dp"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/robotoslab_medium"
+        android:textColor="#929292"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -45,54 +50,51 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:fontFamily="@font/robotoslab_medium"
+        android:textColor="#929292"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/emailD"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionD"
-        app:srcCompat="@mipmap/email" />
 
     <TextView
         android:id="@+id/emailD"
-        android:layout_width="189dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:text="Email"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionD" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/phoneD"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@mipmap/phone" />
+        android:layout_width="226dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="43dp"
+        android:background="#f1f0eb"
+        android:drawableStart="@mipmap/email"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/robotoslab_medium"
+        android:gravity="center|start"
+        android:textAlignment="textStart"
+        android:textColor="#929292"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionD"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/phoneD"
-        android:layout_width="189dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:text="phone"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/emailD" />
+        android:layout_width="226dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="7dp"
+        android:background="#f1f0eb"
+        android:drawableStart="@mipmap/phone"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/robotoslab_medium"
+        android:gravity="center|start"
+        android:textAlignment="textStart"
+        android:textColor="#929292"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailD"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/location"

@@ -11,11 +11,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RCKindergarten"
-        android:layout_width="413dp"
-        android:layout_height="388dp"
+        android:layout_width="410dp"
+        android:layout_height="403dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -70,21 +72,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="219dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="27dp"
-        android:fontFamily="@font/robotoslab_medium"
-        android:text="kindergarten:"
-        android:textColor="#ff7838"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/RCKindergarten"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardDammam"
@@ -188,4 +175,16 @@
         android:src="@drawable/card_giraffe"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f1f0eb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDammam" />
 </androidx.constraintlayout.widget.ConstraintLayout>

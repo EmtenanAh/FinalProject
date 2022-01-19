@@ -140,43 +140,55 @@ class UserRepository {
         phone: String,
         fb_id: String,
         id: String,
-        context: Context
     ): MutableLiveData<User> {
         var mutableLiveData = MutableLiveData<User>()
 
-        val db = Firebase.firestore
-        auth = Firebase.auth
-        db.collection("users").document(auth.currentUser?.uid.toString())
-            .update(
-                "email", email,
-                "name", name,
-                "phone", phone,
-                "birthday", birthday
-            ).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    val document: Void? = it.result
-                    if (document != null) {
-                        Log.d(TAG, "DocumentSnapshot data: " + it.result.toString())
+//        val db = Firebase.firestore
+//        auth = Firebase.auth
+//        db.collection("users").document(auth.currentUser?.uid.toString())
+//            .update(
+//                "email", email,
+//                "name", name,
+//                "phone", phone,
+//                "birthday", birthday
+//            ).addOnCompleteListener {
+//                if (it.isSuccessful) {
+//                    val document: Void? = it.result
+//                    if (document != null) {
+//                        Log.d(TAG, "DocumentSnapshot data: " + it.result.toString())
+//
+//                    } else {
+//                        Log.d(TAG, "No such document")
+//                    }
+//                    Toast.makeText(
+//                        context,
+//                        "profile has was updated Successful",
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+//                } else {
+//                    Log.d(TAG, "get failed with ", it.exception)
+//
+//                }
+//            }
 
-                    } else {
-                        Log.d(TAG, "No such document")
-                    }
-                    Toast.makeText(
-                        context,
-                        "profile has was updated Successful",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else {
-                    Log.d(TAG, "get failed with ", it.exception)
+//        var user = User(birthday,email, fb_id, id, name, phone)
+        var userService = API.getInstance().create(UserService::class.java)
 
-                }
+        val calluser=userService.updateProfile(id, User(birthday, email, fb_id, id, name, phone))
+        calluser.enqueue(object:Callback<User>{
+
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                mutableLiveData.postValue(response.body())
             }
-        var user = User(birthday,email, fb_id, id, name, phone)
-        mutableLiveData.postValue(user)
+
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+            }
+
+        })
 
 
         return mutableLiveData
     }
 
-    // fun logout() = Firebase.auth.signOut()
 }

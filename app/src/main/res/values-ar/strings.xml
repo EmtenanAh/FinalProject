@@ -27,5 +27,7 @@
     <string name="apply_nowlist">سجل الآن</string>
     <string name="apply_now">سجل الآن</string>
     <string name="register_now">انشاء حساب الآن</string>
-
+    <string name="home">الصفحةالرئسية </string>
+    <string name="Favorite">المفضلة</string>
+    <string name="Profile">حسابي</string>
 </resources>

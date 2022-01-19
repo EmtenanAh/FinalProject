@@ -15,7 +15,11 @@ class HomeActivity : AppCompatActivity() {
         var viewPager = findViewById<ViewPager2>(R.id.viewPager)
         var tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         viewPager.adapter = FragmentAdapter(this)
-        var title = arrayOf("Home", "Favorite", "Profile")
+        var title = arrayOf(
+            getString(R.string.home),
+            getString(R.string.Favorite),
+            getString(R.string.Profile)
+        )
         var icons = arrayOf(
             R.drawable.ic_baseline_home_24,
             R.drawable.ic_baseline_favorite_24,

@@ -14,4 +14,8 @@ interface UserService {
 
     @POST("User")
     fun addUser(@Body u: User): Call<User>
+
+    @PUT("User/{id}")
+    fun updateProfile(@Path("id") id: String,@Body user: User): Call<User>
+
 }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.viewModels
@@ -15,7 +16,7 @@ import com.example.finalproject.View.Dhahran.KindergartenAdapter
 
 
 class KindergartenFragment : Fragment() {
-
+lateinit var adapter: KindergartenAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -48,6 +49,23 @@ class KindergartenFragment : Fragment() {
       viewModel.getkindergarten().observe(this, { list ->
           RCKindergarten.adapter = KindergartenAdapter(list)
       })
+
+        var searchView=v.findViewById<SearchView>(R.id.searchView)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+
+            override fun onQueryTextSubmit(query: String?): Boolean {
+               adapter.filter.filter(query)
+                return false
+            }
+
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filter.filter(newText)
+                RCKindergarten.adapter=adapter
+                return false
+            }
+
+        })
 
 
         return v

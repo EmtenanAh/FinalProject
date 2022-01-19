@@ -8,8 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.viewModels
+import com.example.finalproject.Model.User
 import com.example.finalproject.R
 import com.example.finalproject.Util.SharedprefHelper
 import com.example.finalproject.View.Login.Login
@@ -29,7 +32,7 @@ class ProfileFragment : Fragment() {
         val context = inflater.context
         val v = inflater.inflate(R.layout.fragment_profile, container, false)
         val name = v.findViewById<EditText>(R.id.name)
-        val email = v.findViewById<EditText>(R.id.email)
+        val email = v.findViewById<TextView>(R.id.email)
         val phone = v.findViewById<EditText>(R.id.phone)
         val birthday = v.findViewById<EditText>(R.id.birthday)
         var save = v.findViewById<Button>(R.id.save)
@@ -56,11 +59,25 @@ class ProfileFragment : Fragment() {
         })
 
         save.setOnClickListener {
+            var auth=Firebase.auth
             var name = name.text.toString()
             var email = email.text.toString()
             var phone = phone.text.toString()
             var birthday = birthday.text.toString()
-            viewModelProfile.updateUser(email,name,birthday,phone, fb_id = String(), id = String(),context)
+if (iduser.isNotEmpty()) {
+    var user=User(birthday,email, auth.currentUser?.uid.toString(),iduser,name, phone)
+    viewModelProfile.updateUser(user.email,user.name,user.birthday,user.phone,user.fb_id,iduser).observeForever{
+        if(it!=null){
+            Toast.makeText(context, "update", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(context, "no", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+
+}
+
 
 
         }
