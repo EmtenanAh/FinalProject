@@ -29,20 +29,19 @@
 
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/bt_connect"
                 android:layout_width="320dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="12dp"
                 android:layout_marginEnd="29dp"
                 android:layout_marginBottom="12dp"
                 android:background="#f1f0eb"
-                android:drawableStart="@drawable/order"
+                android:drawableStart="@drawable/question"
                 android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
-                android:drawablePadding="5dp"
+                android:drawablePadding="8dp"
                 android:fontFamily="@font/robotoslab_medium"
                 android:gravity="center|start"
-                android:text="@string/connect_with_us"
+                android:text="92000100"
                 android:textAlignment="textStart"
                 android:textColor="#929292"
                 android:textSize="18sp"
@@ -155,7 +154,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/bt_connect"
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
 
             <TextView
@@ -163,9 +162,7 @@
                 android:layout_width="320dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="29dp"
-                android:layout_marginBottom="10dp"
                 android:background="#f1f0eb"
                 android:drawableStart="@drawable/order"
                 android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
@@ -176,7 +173,7 @@
                 android:textAlignment="textStart"
                 android:textColor="#929292"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintBottom_toTopOf="@+id/bt_connect"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/birthday"
@@ -184,23 +181,17 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/sing_out"
-                android:layout_width="86dp"
-                android:layout_height="106dp"
-                android:layout_marginStart="128dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="24dp"
-                app:layout_constraintBottom_toTopOf="@+id/name"
+                android:layout_width="92dp"
+                android:layout_height="80dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/imageView12"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/logoutt"
 
                     app:layout_constraintStart_toStartOf="parent"
@@ -226,11 +217,11 @@
                 android:id="@+id/textView6"
                 android:layout_width="122dp"
                 android:layout_height="35dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
                 android:drawableStart="@drawable/settings"
                 android:drawablePadding="5dp"
-                android:text="Profile"
+                android:text="Setting"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

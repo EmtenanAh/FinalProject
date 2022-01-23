@@ -153,13 +153,16 @@
 
 
         android:layout_height="48dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
         android:background="#ff7838"
         android:fontFamily="@font/robotoslab_medium"
         android:text="@string/singup"
         android:textColor="#FFDDA3 "
+        app:layout_constraintBottom_toTopOf="@+id/tx_txt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Scregister"
         tools:ignore="TextContrastCheck" />
 
@@ -167,12 +170,15 @@
         android:id="@+id/tx_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="83dp"
         android:fontFamily="@font/robotoslab_medium"
         android:text="@string/already_have_an_account_sign_in"
         android:textColor="@color/browser_actions_title_color"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/loginactivity1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register" />
 
     <ImageView
@@ -199,11 +205,14 @@
         android:id="@+id/loginactivity1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="66dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="83dp"
         android:fontFamily="@font/robotoslab_medium"
-        android:text=" Sign in."
+        android:text="@string/sign_in"
         android:textColor="#ff7838"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tx_txt"
         app:layout_constraintTop_toBottomOf="@+id/register" />
 </androidx.constraintlayout.widget.ConstraintLayout>

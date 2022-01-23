@@ -11,6 +11,7 @@ import retrofit2.Response
 class KindergartenRepository {
     var mutableLiveData = MutableLiveData<List<Kindergarten>>()
     var kindergartenservice = API.getInstance().create(KindergartenService::class.java)
+
     fun getAllKindergarten(): MutableLiveData<List<Kindergarten>> {
 
 

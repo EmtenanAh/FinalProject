@@ -1,6 +1,10 @@
 package com.example.finalproject.View.Fragment.Profile
 
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,6 +40,7 @@ class ProfileFragment : Fragment() {
         val phone = v.findViewById<EditText>(R.id.phone)
         val birthday = v.findViewById<EditText>(R.id.birthday)
         var save = v.findViewById<Button>(R.id.save)
+        var bt_connect=v.findViewById<TextView>(R.id.bt_connect)
         var sing_out=v.findViewById<ConstraintLayout>(R.id.sing_out)
         var userPreferences=SharedprefHelper
         sing_out.setOnClickListener {
@@ -79,6 +84,12 @@ if (iduser.isNotEmpty()) {
 }
 
 
+
+        }
+        bt_connect.setOnClickListener {
+            val dialIntent = Intent(Intent.ACTION_DIAL)
+            dialIntent.data = Uri.parse("tel:" + "92000100")
+            startActivity(dialIntent)
 
         }
         return v

@@ -1,11 +1,13 @@
 package com.example.finalproject.View.Details
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.example.finalproject.Model.Kindergarten
 import com.example.finalproject.R
 import com.squareup.picasso.Picasso
@@ -35,5 +37,27 @@ class DetailsActivity : AppCompatActivity() {
             intent.setPackage("com.google.android.apps.maps")
             startActivity(intent)
         }
+        emailD.setOnClickListener {
+
+            val i = Intent(Intent.ACTION_SEND)
+            i.type = "message/Hi Little Angel Kindergarten"
+            i.putExtra(Intent.EXTRA_EMAIL, arrayOf(Details.email))
+            i.putExtra(Intent.EXTRA_SUBJECT, "subject of email")
+            i.putExtra(Intent.EXTRA_TEXT, "body of email")
+            try {
+                startActivity(Intent.createChooser(i, "Send mail..."))
+            } catch (ex: ActivityNotFoundException) {
+                Toast.makeText(
+                    this,
+                    "There are no email clients installed.",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            }
+        }
+        phoneD.setOnClickListener {
+         val dialIntent = Intent(Intent.ACTION_DIAL)
+            dialIntent.data = Uri.parse("tel:" + "920005039")
+            startActivity(dialIntent)        }
     }
 }

@@ -15,7 +15,7 @@
     <string name="name">الإسم</string>
     <string name="phone">رقم الجوال</string>
     <string name="singup">تسجيل جديد</string>
-    <string name="already_have_an_account_sign_in">يوجد لديك حساب؟ تسجيل دخول</string>
+    <string name="already_have_an_account_sign_in">يوجد لديك حساب؟</string>
     <string name="welcome_to_the_little_angel_kindergarten">مرحبا بك في روضة الملاك الصغير ...... </string>
     <string name="dammam">الدمام</string>
     <string name="dhahran">الظهران</string>
@@ -30,4 +30,6 @@
     <string name="home">الصفحةالرئسية </string>
     <string name="Favorite">المفضلة</string>
     <string name="Profile">حسابي</string>
+    <string name="sign_in">تسجيل دخول</string>
+
 </resources>
